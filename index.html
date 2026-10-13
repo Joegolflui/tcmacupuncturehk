@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好森體針灸 | 羅綺峰 註冊中醫師</title>
+    <meta name="description" content="好森體針灸 - 羅綺峰註冊中醫師（香港大學中醫全科學士）。專治痛症針灸、面癱調理、頸肩腰腿痛、婦科內科調理。首診/針灸體驗價 $350。立即 WhatsApp 預約！">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=PingFang+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3d2f;
+            --primary-light: #2d5a43;
+            --accent: #d4af37;
+            --accent-hover: #b89628;
+            --bg-light: #f7f9f7;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --white: #ffffff;
+            --card-shadow: 0 10px 30px rgba(30, 61, 47, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-btn {
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .nav-btn:hover {
+            background-color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 4rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: var(--bg-light);
+            transform: skewY(-2deg);
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .doctor-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        .price-tag {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 2.5rem;
+        }
+
+        .price-label {
+            font-size: 1.1rem;
+            color: var(--white);
+        }
+
+        .price-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+
+        /* Features / Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(30, 61, 47, 0.12);
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* Doctor Profile Card */
+        .profile-section {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            box-shadow: var(--card-shadow);
+            margin: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero h1 { font-size: 2rem; }
+        }
+
+        .doctor-avatar-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(30, 61, 47, 0.2);
+        }
+
+        .doctor-avatar-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .doctor-avatar-box p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .qual-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .qual-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+        }
+
+        .qual-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* Booking / QR Section */
+        .booking-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #152c22 100%);
+            color: white;
+            border-radius: 24px;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .qr-box {
+            background: white;
+            display: inline-block;
+            padding: 1rem;
+            border-radius: 16px;
+            margin: 2rem 0 1.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .qr-box img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">好森體<span>針灸</span></a>
+            <a href="https://wa.me/85253633308?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%8F%90%E6%83%B3%E9%A0%90%E7%B4%84%E7%BE%85%E7%B0%B7%E5%B3%B0%E9%86%AB%E5%B8%AB%E9%87%9D%E7%80%B8%E6%9C%8D%E5%8B%99" class="nav-btn" target="_blank">立即預約 $350</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="doctor-badge">✦ 羅綺峰 註冊中醫師 (香港大學中醫全科學士) ✦</div>
+            <h1>專業針灸痛症調理<br>重塑健康好森體</h1>
+            <p>香港大學全科專業背景 ｜ 專攻針灸痛症、面癱及內科調理</p>
+            
+            <div class="price-tag">
+                <span class="price-label">針灸體驗推介價：</span>
+                <span class="price-value">$350</span>
+            </div>
+
+            <div class="cta-group">
+                <a href="https://wa.me/85253633308?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%8F%90%E6%83%B3%E9%A0%90%E7%B4%84%E7%BE%85%E7%B0%B7%E5%B3%B0%E9%86%AB%E5%B8%AB%E9%87%9D%E7%80%B8%E6%9C%8D%E5%8B%99" class="btn-primary" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    WhatsApp 即時預約 ($350)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">核心醫療項目</h2>
+        <p class="section-subtitle">傳統針灸智慧 ｜ 精準疏通經絡 ｜ 告別長期痛症</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>急性及慢性痛症針灸</h3>
+                <p>針對肩頸痛、坐骨神經痛、腰背拉傷、網球肘及膝關節退化，透過深層針灸激發自癒機能，快速止痛通絡。</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌸</div>
+                <h3>顏面神經麻痺（面癱）</h3>
+                <p>抓緊黃金治療期，運用神經針灸刺激面部經絡，促進神經修復，改善口眼歪斜與面部肌肉無力。</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧘‍♀️</div>
+                <h3>頸肩腰腿痛及姿勢矯正</h3>
+                <p>針對都市人久坐、低頭導致的脊椎負擔與肌肉緊張，結合針灸與鬆解手法，還原肌肉平衡。</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🍃</div>
+                <h3>婦科及體質內科調理</h3>
+                <p>經痛、月經不調、手腳冰冷、失眠及疲勞綜合症，以針灸配合中藥調理，溫經散寒，調理氣血。</p>
+            </div>
+        </div>
+
+        <section class="profile-section">
+            <div class="doctor-avatar-box">
+                <div style="font-size: 3rem; margin-bottom: 0.5rem;">⚕️</div>
+                <h3>羅綺峰 醫師</h3>
+                <p>香港註冊中醫師</p>
+                <div style="margin-top: 1rem; font-size: 0.9rem; background: rgba(255,255,255,0.15); padding: 0.4rem; border-radius: 8px;">好森體針灸 主理醫師</div>
+            </div>
+
+            <div>
+                <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">專業資格與理念</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.5rem;">
+                    羅綺峰醫師畢業於香港大學中醫學院，具備嚴謹的臨床醫學背景。主張「治病必求於本」，善用古法針灸與現代神經解剖相結合，為患者提供精準、安全的診療。
+                </p>
+                <ul class="qual-list">
+                    <li>香港中醫藥管理委員會 註冊中醫師</li>
+                    <li>香港大學中醫全科學士 (BCM, HKU)</li>
+                    <li>專攻痛症針灸解剖學與經絡穴位療法</li>
+                    <li>秉持細心診斷，一對一針對性客製化方案</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <h2 style="font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem;">即時 WhatsApp 預約</h2>
+            <p style="font-size: 1.1rem; opacity: 0.9;">掃描下方二維碼或點擊按鈕，享有 $350 體驗價優惠</p>
+
+            <div class="qr-box">
+                <img src="whatsapp_qr.png" alt="好森體 WhatsApp 預約 QR Code">
+            </div>
+
+            <div>
+                <a href="https://wa.me/85253633308?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%8F%90%E6%83%B3%E9%A0%90%E7%B4%84%E7%BE%85%E7%B0%B7%E5%B3%B0%E9%86%AB%E5%B8%AB%E9%87%9D%E7%80%B8%E6%9C%8D%E5%8B%99" class="btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem;" target="_blank">
+                    點擊開啟 WhatsApp (+852 5363 3308)
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>好森體針灸 ｜ 羅綺峰 註冊中醫師</strong></p>
+        <p style="margin-top: 0.5rem;">預約查詢：+852 5363 3308 ｜ 版權所有 © 2026 好森體針灸</p>
+    </footer>
+
+</body>
+</html>
