@@ -10,15 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=PingFang+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3d2f;
-            --primary-light: #2d5a43;
-            --accent: #d4af37;
-            --accent-hover: #b89628;
-            --bg-light: #f7f9f7;
-            --text-dark: #1f2937;
-            --text-muted: #4b5563;
+            --primary: #0e5d42;        /* 好森體經典森林綠 */
+            --primary-dark: #09422f;
+            --primary-light: #eaf3ee;
+            --accent: #25d366;         /* 鮮艷預約綠 */
+            --gold: #d4af37;
+            --bg-light: #f7faf8;
+            --text-dark: #1a2b22;
+            --text-muted: #4a5d53;
             --white: #ffffff;
-            --card-shadow: 0 10px 30px rgba(30, 61, 47, 0.08);
+            --card-shadow: 0 8px 25px rgba(14, 93, 66, 0.08);
         }
 
         * {
@@ -40,12 +41,13 @@
 
         /* Header */
         header {
-            background-color: var(--primary);
-            color: var(--white);
+            background-color: var(--white);
+            color: var(--text-dark);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-bottom: 2px solid var(--primary-light);
         }
 
         .nav-container {
@@ -58,10 +60,10 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: 1px;
-            color: var(--white);
+            color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -69,48 +71,38 @@
         }
 
         .logo span {
-            color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 900;
         }
 
         .nav-btn {
-            background-color: var(--accent);
-            color: var(--primary);
+            background-color: var(--primary);
+            color: var(--white);
             font-weight: 700;
-            padding: 0.6rem 1.2rem;
+            padding: 0.65rem 1.4rem;
             border-radius: 25px;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 12px rgba(14, 93, 66, 0.25);
         }
 
         .nav-btn:hover {
-            background-color: var(--white);
+            background-color: var(--primary-dark);
             transform: translateY(-2px);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-            padding: 4rem 1.5rem 5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #eaf3ee 100%);
+            color: var(--text-dark);
+            padding: 4.5rem 1.5rem 5.5rem;
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: var(--bg-light);
-            transform: skewY(-2deg);
+            border-bottom: 1px solid #dbe8e0;
         }
 
         .hero-container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
@@ -118,51 +110,55 @@
 
         .doctor-badge {
             display: inline-block;
-            background: rgba(212, 175, 55, 0.2);
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            padding: 0.4rem 1.2rem;
+            background: var(--white);
+            border: 1.5px solid var(--primary);
+            color: var(--primary);
+            padding: 0.5rem 1.4rem;
             border-radius: 30px;
-            font-size: 0.95rem;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(14, 93, 66, 0.08);
         }
 
         .hero h1 {
             font-size: 2.8rem;
-            line-height: 1.3;
-            margin-bottom: 1rem;
+            line-height: 1.35;
+            margin-bottom: 1.2rem;
             font-weight: 900;
+            color: var(--primary);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.2rem;
+            font-weight: 500;
         }
 
         .price-tag {
             display: inline-flex;
             align-items: baseline;
             gap: 10px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 1rem 2rem;
-            border-radius: 15px;
+            background: var(--white);
+            border: 2px solid var(--primary);
+            padding: 1rem 2.2rem;
+            border-radius: 20px;
             margin-bottom: 2.5rem;
+            box-shadow: 0 8px 20px rgba(14, 93, 66, 0.1);
         }
 
         .price-label {
-            font-size: 1.1rem;
-            color: var(--white);
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-weight: 600;
         }
 
         .price-value {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            color: var(--accent);
+            color: var(--primary);
             font-family: 'Noto Serif TC', serif;
         }
 
@@ -174,23 +170,24 @@
         }
 
         .btn-primary {
-            background-color: #25D366; /* WhatsApp Green */
+            background-color: var(--primary);
             color: white;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
-            padding: 0.9rem 2rem;
+            padding: 1rem 2.3rem;
             border-radius: 30px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 6px 20px rgba(14, 93, 66, 0.3);
             transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
+            background-color: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 10px 25px rgba(14, 93, 66, 0.4);
         }
 
         /* Container */
@@ -202,17 +199,17 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             color: var(--primary);
             margin-bottom: 0.8rem;
-            font-weight: 700;
+            font-weight: 900;
         }
 
         .section-subtitle {
             text-align: center;
             color: var(--text-muted);
             margin-bottom: 3rem;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
         }
 
         /* Features / Services Grid */
@@ -224,10 +221,10 @@
 
         .service-card {
             background: var(--white);
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius: 18px;
+            padding: 2.2rem;
             box-shadow: var(--card-shadow);
-            border: 1px solid rgba(0,0,0,0.03);
+            border: 1px solid #e2ece6;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -238,45 +235,47 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 4px;
+            width: 5px;
             height: 100%;
             background-color: var(--primary);
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(30, 61, 47, 0.12);
+            box-shadow: 0 15px 35px rgba(14, 93, 66, 0.15);
         }
 
         .service-icon {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 1rem;
             color: var(--primary);
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             color: var(--primary);
             margin-bottom: 0.8rem;
+            font-weight: 700;
         }
 
         .service-card p {
             color: var(--text-muted);
-            font-size: 0.98rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.65;
         }
 
         /* Doctor Profile Card */
         .profile-section {
             background: var(--white);
             border-radius: 24px;
-            padding: 3rem 2rem;
+            padding: 3rem 2.5rem;
             box-shadow: var(--card-shadow);
             margin: 4rem 0;
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 3rem;
             align-items: center;
+            border: 1px solid #e2ece6;
         }
 
         @media (max-width: 768px) {
@@ -284,27 +283,28 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .hero h1 { font-size: 2rem; }
+            .hero h1 { font-size: 2.1rem; }
         }
 
         .doctor-avatar-box {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             border-radius: 20px;
             padding: 2.5rem 1.5rem;
             color: white;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(30, 61, 47, 0.2);
+            box-shadow: 0 10px 25px rgba(14, 93, 66, 0.25);
         }
 
         .doctor-avatar-box h3 {
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
-            color: var(--accent);
+            color: #ffffff;
+            font-weight: 700;
         }
 
         .doctor-avatar-box p {
             font-size: 1rem;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .qual-list {
@@ -315,7 +315,7 @@
         .qual-list li {
             position: relative;
             padding-left: 1.8rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.9rem;
             font-size: 1.05rem;
             color: var(--text-dark);
         }
@@ -326,26 +326,27 @@
             left: 0;
             color: var(--primary);
             font-size: 1.1rem;
+            font-weight: bold;
         }
 
         /* Booking / QR Section */
         .booking-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #152c22 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             border-radius: 24px;
             padding: 3.5rem 2rem;
             text-align: center;
             margin: 4rem 0;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(14, 93, 66, 0.2);
         }
 
         .qr-box {
             background: white;
             display: inline-block;
-            padding: 1rem;
-            border-radius: 16px;
+            padding: 1.2rem;
+            border-radius: 18px;
             margin: 2rem 0 1.5rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
         .qr-box img {
@@ -356,11 +357,11 @@
 
         /* Footer */
         footer {
-            background-color: #111827;
-            color: #9ca3af;
+            background-color: var(--primary-dark);
+            color: #d2e4db;
             text-align: center;
             padding: 2.5rem 1.5rem;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         footer strong {
@@ -432,11 +433,11 @@
                 <div style="font-size: 3rem; margin-bottom: 0.5rem;">⚕️</div>
                 <h3>羅綺峰 醫師</h3>
                 <p>香港註冊中醫師</p>
-                <div style="margin-top: 1rem; font-size: 0.9rem; background: rgba(255,255,255,0.15); padding: 0.4rem; border-radius: 8px;">好森體針灸 主理醫師</div>
+                <div style="margin-top: 1rem; font-size: 0.9rem; background: rgba(255,255,255,0.2); padding: 0.4rem; border-radius: 8px;">好森體針灸 主理醫師</div>
             </div>
 
             <div>
-                <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">專業資格與理念</h2>
+                <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem; font-weight: 700;">專業資格與理念</h2>
                 <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.5rem;">
                     羅綺峰醫師畢業於香港大學中醫學院，具備嚴謹的臨床醫學背景。主張「治病必求於本」，善用古法針灸與現代神經解剖相結合，為患者提供精準、安全的診療。
                 </p>
@@ -450,15 +451,15 @@
         </section>
 
         <section class="booking-section">
-            <h2 style="font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem;">即時 WhatsApp 預約</h2>
-            <p style="font-size: 1.1rem; opacity: 0.9;">掃描下方二維碼或點擊按鈕，享有 $350 體驗價優惠</p>
+            <h2 style="font-size: 2.2rem; color: #ffffff; margin-bottom: 0.5rem; font-weight: 700;">即時 WhatsApp 預約</h2>
+            <p style="font-size: 1.1rem; opacity: 0.95;">掃描下方二維碼或點擊按鈕，享有 $350 體驗價優惠</p>
 
             <div class="qr-box">
                 <img src="whatsapp_qr.png" alt="好森體 WhatsApp 預約 QR Code">
             </div>
 
             <div>
-                <a href="https://wa.me/85253633308?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%8F%90%E6%83%B3%E9%A0%90%E7%B4%84%E7%BE%85%E7%B0%B7%E5%B3%B0%E9%86%AB%E5%B8%AB%E9%87%9D%E7%80%B8%E6%9C%8D%E5%8B%99" class="btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem;" target="_blank">
+                <a href="https://wa.me/85253633308?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%8F%90%E6%83%B3%E9%A0%90%E7%B4%84%E7%BE%85%E7%B0%B7%E5%B3%B0%E9%86%AB%E5%B8%AB%E9%87%9D%E7%80%B8%E6%9C%8D%E5%8B%99" class="btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem; background: #ffffff; color: var(--primary); font-weight: bold;" target="_blank">
                     點擊開啟 WhatsApp (+852 5363 3308)
                 </a>
             </div>
