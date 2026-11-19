@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杜醫師法科｜3代祖傳中醫</title>
+    <meta name="description" content="杜醫師，3代祖傳中醫。主理中醫方脈、針灸、頭肩腰腿痛、經絡治療；道術超渡祖先、冤親債主、嬰靈、升運化小人、驅邪治鬼；課程包括詠春木人樁健身班，以及符咒初、中、高及導師班。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #C2185B;
+            --primary-light: #E91E63;
+            --accent: #E91E63;
+            --accent-hover: #C2185B;
+            --button: #DB2777;
+            --link: #BE185D;
+            --bg-light: #FFFFFF;
+            --hero-tint-start: #FDF2F8;
+            --hero-tint-end: #FCE7F3;
+            --text-dark: #1F2937;
+            --text-muted: #4B5563;
+            --white: #ffffff;
+            --card-shadow: 0 10px 30px rgba(194, 24, 91, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'PingFang TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            color: var(--text-dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 0 #FCE7F3;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-btn {
+            background-color: var(--button);
+            color: var(--white);
+            font-weight: 700;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(219, 39, 119, 0.28);
+        }
+
+        .nav-btn:hover {
+            background-color: var(--accent-hover);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--hero-tint-start) 0%, var(--hero-tint-end) 100%);
+            color: var(--text-dark);
+            padding: 4rem 1.5rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: var(--bg-light);
+            transform: skewY(-2deg);
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .doctor-badge {
+            display: inline-block;
+            background: rgba(233, 30, 99, 0.10);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .price-tag {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 10px;
+            background: rgba(233, 30, 99, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(233, 30, 99, 0.22);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 2.5rem;
+        }
+
+        .price-label {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .price-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+
+        /* Features / Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(194, 24, 91, 0.12);
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* Doctor Profile Card */
+        .profile-section {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            box-shadow: var(--card-shadow);
+            margin: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero h1 { font-size: 2rem; }
+        }
+
+        .doctor-avatar-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(194, 24, 91, 0.20);
+        }
+
+        .doctor-avatar-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .doctor-avatar-box p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .qual-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .qual-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+        }
+
+        .qual-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* Booking / QR Section */
+        .booking-section {
+            background: linear-gradient(135deg, var(--hero-tint-start) 0%, var(--hero-tint-end) 100%);
+            color: var(--text-dark);
+            border-radius: 24px;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            margin: 4rem 0;
+            box-shadow: 0 15px 35px rgba(194, 24, 91, 0.10);
+            border: 1px solid rgba(233, 30, 99, 0.16);
+        }
+
+        .qr-box {
+            background: white;
+            display: inline-block;
+            padding: 1rem;
+            border-radius: 16px;
+            margin: 2rem 0 1.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .qr-box img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #9ca3af;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .nav-text {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.98rem;
+        }
+        .nav-text:hover {
+            color: var(--link);
+        }
+        @media (max-width: 480px) {
+            .nav-text { font-size: 0.9rem; }
+            .nav-right { gap: 0.7rem; }
+        }
+
+        .fa-hero {
+            background: linear-gradient(135deg, var(--hero-tint-start) 0%, var(--hero-tint-end) 100%);
+            color: var(--text-dark);
+            padding: 3.5rem 1.5rem 3rem;
+            text-align: center;
+        }
+        .fa-hero .doctor-badge { margin-bottom: 1.2rem; }
+        .fa-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+        }
+        .fa-hero p { color: var(--text-muted); font-size: 1.1rem; }
+        .fa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .fa-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(233, 30, 99, 0.12);
+        }
+        .fa-card h2 {
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .fa-card ul { list-style: none; }
+        .fa-card li {
+            position: relative;
+            padding-left: 1.6rem;
+            margin-bottom: 0.7rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        .fa-card li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        .fa-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">好森體<span>針灸</span></a>
+            <div class="nav-right">
+                <a href="fake.html" class="nav-text">法科</a>
+                <a href="index.html" class="nav-btn">返回好森體</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="fa-hero">
+        <div class="hero-container">
+            <div class="doctor-badge">杜醫師 · 3代祖傳中醫</div>
+            <h1>法科資料</h1>
+            <p>以下內容按 2026 年 11 月 11 日交嚟嘅手寫便條整理，與好森體羅綺峰醫師主頁分開。</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="fa-grid">
+            <section class="fa-card">
+                <h2>主理</h2>
+                <ul>
+                    <li>中醫方脈</li>
+                    <li>針灸</li>
+                    <li>頭肩腰腿痛</li>
+                    <li>經絡治療</li>
+                </ul>
+            </section>
+            <section class="fa-card">
+                <h2>道術</h2>
+                <ul>
+                    <li>超渡祖先</li>
+                    <li>冤親債主</li>
+                    <li>嬰靈</li>
+                    <li>升運化小人</li>
+                    <li>驅邪治鬼</li>
+                </ul>
+            </section>
+            <section class="fa-card">
+                <h2>課程</h2>
+                <ul>
+                    <li>詠春木人樁健身班</li>
+                    <li>符咒初、中、高及導師班</li>
+                </ul>
+            </section>
+        </div>
+        <p class="fa-note">便條未有寫杜醫師聯絡電話或地址，呢頁暫時唔放預約方法。</p>
+    </div>
+
+    <footer>
+        <p><strong>杜醫師 ｜ 3代祖傳中醫</strong></p>
+        <p style="margin-top: 0.5rem;">版權所有 © 2026 ｜ <a href="index.html" style="color:#F9A8D4;text-decoration:none;">好森體針灸</a></p>
+    </footer>
+</body>
+</html>
